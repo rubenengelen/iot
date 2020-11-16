@@ -1,0 +1,36 @@
+-- Adminer 4.7.6 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+CREATE DATABASE `student_11901558` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `student_11901558`;
+
+DROP TABLE IF EXISTS `Data`;
+CREATE TABLE `Data` (
+  `id` int(6) unsigned NOT NULL,
+  `Waarde` int(11) NOT NULL,
+  `Tijd` timestamp NOT NULL DEFAULT current_timestamp(),
+  KEY `id` (`id`),
+  CONSTRAINT `Data_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `Sensoren` (`id`),
+  CONSTRAINT `Data_ibfk_2` FOREIGN KEY (`id`) REFERENCES `Sensoren` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `Data` (`id`, `Waarde`, `Tijd`) VALUES
+(1,	12,	'2020-10-16 12:36:01');
+
+DROP TABLE IF EXISTS `Sensoren`;
+CREATE TABLE `Sensoren` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `Naam` varchar(30) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
+  `IPaddress` varchar(30) NOT NULL,
+  `regdate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `Sensoren` (`id`, `Naam`, `IPaddress`, `regdate`) VALUES
+(1,	'Sensor1',	'',	'2020-10-16 12:38:01');
+
+-- 2020-11-16 09:20:45
