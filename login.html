@@ -1,9 +1,15 @@
 <html>
 <body>
-	<form action="check.php" method="post">
+	<form method="post">
 		username: <input type="text" name="username"><br>
 		password: <input type="password" name="password"><br>
 		<input type="submit">
 	</form>
+	<?php
+	if($username == "ruben" && $password == "Hallo")
+	{
+		window.location.replace("succes.html");
+	}
+	?>
 </body>
 </html>
