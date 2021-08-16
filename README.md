@@ -11,4 +11,4 @@ De [index.html](https://github.com/rubenengelen/iot/blob/main/final/index.html) 
 ## Weather API
 
 
-![Flowchart](https://github.com/rubenengelen/iot/blob/main/final/Flowchart.png?raw=true)
+![Flowchart](https://github.com/rubenengelen/iot/blob/main/final/flowchart.png?raw=true)
